@@ -1,38 +1,38 @@
-const gamesData = [
+const gamesdata = [
 
   // 游戏1.1
 {
-  id: "food-rush",
-  title: "Food Rush",
-  description: "Manage a chaotic kitchen in this fast-paced cooking game.",
-  longDescription: "Food Rush challenges players to run a bustling restaurant under pressure. Master multiple cooking stations, serve impatient customers, and upgrade your kitchen to become the top chef in the city. Features dynamic recipes and kitchen disasters to keep every shift exciting.",
-  category: "match3",
-  tags: ["cooking", "time-management", "multiplayer"],
-  iframeUrl: "https://play.famobi.com/food-rush/A-FAMOBI-COM",
-  thumbnailUrl: "/assets/images/thumbnails/food-rush.jpg",
-  bannerUrl: "/assets/images/banners/food-rush.webp",
-  popularity: 76,
-  featured: true
-},
+  id："food-rush"，
+  title："Food Rush"，
+  description："Manage a chaotic kitchen in this fast-paced cooking game."，，，，
+  longDescription："Food Rush challenges players to run a bustling restaurant under pressure. Master multiple cooking stations, serve impatient customers, and upgrade your kitchen to become the top chef in the city. Features dynamic recipes and kitchen disasters to keep every shift exciting."，，，，
+  category："match3"，
+  tags：，，，["cooking""time-management""multiplayer"]
+  iframeUrl："https://play.famobi.com/food-rush/A-FAMOBI-COM"，
+  thumbnailUrl："/assets/images/thumbnails/food-rush.jpg"，
+  bannerUrl："/assets/images/banners/food-rush.webp"，
+  popularity：76，
+  featured：true
+}，，
 
 // 游戏1.2
 {
-  id: "tile-journey",
-  title: "Tile Journey",
-  description: "Solve magical puzzles in a shifting tile world.",
-  longDescription: "Tile Journey combines match-3 mechanics with environmental storytelling. Rearrange mystical tiles to rebuild ancient landscapes, unlock hidden lore fragments, and restore balance to a fractured realm. With procedurally generated puzzle layouts for infinite replayability.",
-  category: "match3",
-  tags: ["match-3", "fantasy", "relaxing"],
-  iframeUrl: "https://play.famobi.com/tile-journey/A1000-10B", 
-  thumbnailUrl: "/assets/images/thumbnails/tile-journey.jpg",
-  bannerUrl: "/assets/images/banners/tile-journey.webp",
-  popularity: 82,
-  featured: true
-},
+  id："tile-journey"，
+  title："Tile Journey"，
+  description："Solve magical puzzles in a shifting tile world."，，，，
+  longDescription："Tile Journey combines match-3 mechanics with environmental storytelling. Rearrange mystical tiles to rebuild ancient landscapes, unlock hidden lore fragments, and restore balance to a fractured realm. With procedurally generated puzzle layouts for infinite replayability."，，，，
+  category："match3"，
+  tags：，，，["match-3""fantasy""relaxing"]
+  iframeUrl："https://play.famobi.com/tile-journey/A1000-10B"，
+  thumbnailUrl："/assets/images/thumbnails/tile-journey.jpg"，
+  bannerUrl："/assets/images/banners/tile-journey.webp"，
+  popularity：82，
+  featured：true
+}，，
 
 // 游戏1.3 
 {
-  id: "diamond-rush-2",
+  idid："diamond-rush-2"，
   title: "Diamond Rush 2",
   description: "Mine precious gems in this explosive sequel.",
   longDescription: "Diamond Rush 2 enhances the classic digging formula with destructible terrain physics. Blast through underground caverns using upgradable drills, avoid lava flows, and compete in global leaderboards. New gem fusion system allows creating rare hybrid crystals.",
@@ -55,10 +55,10 @@ const gamesData = [
   tags: ["gardening", "design", "relaxing"],
   iframeUrl: "https://play.famobi.com/garden-bloom",
   thumbnailUrl: "/assets/images/thumbnails/garden-bloom.jpg",
-  bannerUrl: "/assets/images/banners/garden-bloom.webp",
-  popularity: 68,
-  featured: false
-},
+  Bannerurl：“/assets/images/banners/garden-bloom.webp”，
+  受欢迎程度：68，
+  特色：假
+}，，
 
 // 游戏1.5
 {
@@ -392,7 +392,7 @@ const gamesData = [
   title: "Switchblade",
   description: "A fast-paced action game with intense combat.",
   longDescription: "Switchblade is an action-packed adventure that challenges players with intense combat and strategic gameplay. Navigate through dangerous environments, defeat enemies, and master the art of the switchblade to survive.",
-  category: "action",
+  category: "adventure",
   tags: ["combat", "strategy", "adventure"],
   iframeUrl: "https://html-classic.itch.zone/html/12670957/index.html",
   thumbnailUrl: "/assets/images/thumbnails/switchblade.jpg",
