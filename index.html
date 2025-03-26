@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Incredibox Sprunki - Interactive Music Adventure Game | AdventureGame.online</title>
-    <meta name="description" content="Play Incredibox Sprunki online - Create amazing music beats while embarking on an adventure. No musical knowledge required!">
-    <meta name="keywords" content="incredibox-sprunki, music game, adventure game, online game, interactive music">
-    <link rel="canonical" href="https://adventuregame.online">
+    <title>Play Free HTML5 Games Online | AdventureGame.online</title>
+    <meta name="description" content="Play the best free HTML5 games online. Our collection includes action, puzzle, adventure, and many more exciting games.">
+    <link rel="canonical" href="https://adventuregame.online/">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -49,95 +48,136 @@
             }
         }
     </style>
+    <script src="/assets/js/games-data.js"></script>
 </head>
-<body class="bg-apple-lightgray text-apple-darkgray font-sans">
-    <header class="bg-apple-blue text-white py-6 shadow-md">
-        <div class="container mx-auto px-4 md:px-8">
-            <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-center text-shadow">Incredibox Sprunki</h1>
-            <p class="text-lg md:text-xl text-center mt-2 max-w-3xl mx-auto">Create amazing music beats while embarking on an interactive adventure journey</p>
+<body class="bg-apple-lightgray text-apple-darkgray font-sans min-h-screen flex flex-col">
+    <header class="bg-apple-blue text-white py-4 shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <a href="/" class="text-2xl font-bold mb-4 md:mb-0">AdventureGame.online</a>
+                <nav class="w-full md:w-auto">
+                    <ul class="flex flex-wrap justify-center md:justify-end space-x-1 md:space-x-4">
+                        <li><a href="/" class="px-3 py-2 rounded bg-blue-600 transition">Home</a></li>
+                        <li><a href="/categories/new.html" class="px-3 py-2 rounded hover:bg-blue-600 transition">New</a></li>
+                        <li><a href="/categories/popular.html" class="px-3 py-2 rounded hover:bg-blue-600 transition">Popular</a></li>
+                        <li><a href="/categories/match3.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{MATCH3_ACTIVE}}">Match3</a></li>
+                        <li><a href="/categories/Bubble Shooter.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{BUBBLE SHOOTER_ACTIVE}}">Bubble Shooter</a></li>
+                        <li><a href="/categories/puzzle.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{PUZZLE_ACTIVE}}">Puzzle</a></li>
+                        <li><a href="/categories/adventure.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{ADVENTURE_ACTIVE}}">Adventure</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <main class="container mx-auto px-4 md:px-8 py-8">
-        <section class="mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-black">Play Incredibox Sprunki Online</h2>
-            <div class="game-container mb-4">
-                <iframe src="https://sprunkiincredibox.org/game/sprunki-original/" allowfullscreen></iframe>
-            </div>
-            <p class="text-sm text-center text-apple-darkgray italic">Game may take a moment to load. For the best experience, use a modern browser.</p>
-        </section>
-
-        <section class="mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-black">About Incredibox Sprunki</h2>
-            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
-                <p class="mb-4">Incredibox Sprunki is an innovative music creation game that combines the joy of making beats with an adventurous gameplay experience. This unique blend allows players to create amazing music compositions while exploring a fantastical world filled with challenges and discoveries.</p>
-                <p class="mb-4">Inspired by the popular Incredibox series, Sprunki takes the concept to new heights by adding adventure elements that make the music creation process even more engaging and rewarding. No musical knowledge is required - the intuitive interface makes it accessible to everyone!</p>
-                <p>Whether you're a music enthusiast or just looking for a fun and creative game, Incredibox Sprunki offers an experience that's both entertaining and artistically fulfilling.</p>
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        <!-- Hero Section -->
+        <section class="bg-gradient-to-r from-apple-blue to-blue-700 text-white rounded-xl p-8 mb-12">
+            <div class="max-w-3xl mx-auto text-center">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4 text-shadow">Play the Best HTML5 Games Online</h1>
+                <p class="text-xl mb-6">Discover a world of fun with our collection of free online games</p>
+                <a href="#featured-games" class="inline-block bg-white text-apple-blue font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition">Start Playing</a>
             </div>
         </section>
 
+        <!-- Featured Games Section -->
         <section class="mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-black">Game Features</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div class="bg-white rounded-xl shadow-lg p-6">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-blue">Intuitive Music Creation</h3>
-                    <p>Create amazing beats and melodies with simple drag-and-drop controls. Layer different sounds to compose your unique music track without any prior musical knowledge.</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-blue">Adventure Mode</h3>
-                    <p>Explore the world of Sprunki, solve puzzles, and complete challenges to unlock new sounds, characters, and musical elements for your compositions.</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-blue">Share Your Creations</h3>
-                    <p>Save your musical masterpieces and share them with friends. Show off your creativity and see what others have made in the Sprunki community.</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6">
-                    <h3 class="text-xl font-semibold mb-3 text-apple-blue">Cross-Platform Experience</h3>
-                    <p>Enjoy Incredibox Sprunki on any device - from desktop computers to tablets and smartphones. Your musical adventure continues wherever you go.</p>
-                </div>
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-black" id="featured-games">Featured Games</h2>
+            <div id="featured-games-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Featured games will be inserted here by JavaScript -->
             </div>
         </section>
 
+        <!-- Popular Games Section -->
         <section class="mb-12">
-            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-black">How to Play</h2>
-            <div class="bg-white rounded-xl shadow-lg p-6 md:p-8">
-                <ol class="list-decimal pl-5 space-y-3">
-                    <li><span class="font-medium">Start the game</span> by clicking on the game window above.</li>
-                    <li><span class="font-medium">Explore the interface</span> to discover different sound elements and characters.</li>
-                    <li><span class="font-medium">Drag and drop</span> characters onto the stage to add their sounds to your composition.</li>
-                    <li><span class="font-medium">Mix and match</span> different sound elements to create your unique beat.</li>
-                    <li><span class="font-medium">Complete challenges</span> in adventure mode to unlock new content.</li>
-                    <li><span class="font-medium">Save your creations</span> and share them with friends.</li>
-                </ol>
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-black">Popular Games</h2>
+            <div id="popular-games-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Popular games will be inserted here by JavaScript -->
+            </div>
+            <div class="text-center mt-8">
+                <a href="/categories/popular.html" class="inline-block bg-apple-blue text-white font-semibold px-6 py-3 rounded-lg hover:bg-blue-600 transition">View All Popular Games</a>
             </div>
         </section>
 
-        <section>
-            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-black">Why Players Love Incredibox Sprunki</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <div class="bg-white rounded-xl shadow-lg p-6 text-center">
-                    <div class="text-apple-blue text-4xl font-bold mb-2">Creative</div>
-                    <p>Express yourself through music without limitations. The possibilities are endless!</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 text-center">
-                    <div class="text-apple-blue text-4xl font-bold mb-2">Engaging</div>
-                    <p>The perfect blend of music creation and adventure gameplay keeps you coming back for more.</p>
-                </div>
-                <div class="bg-white rounded-xl shadow-lg p-6 text-center">
-                    <div class="text-apple-blue text-4xl font-bold mb-2">Accessible</div>
-                    <p>No musical experience needed - anyone can create amazing sounds with the intuitive interface.</p>
-                </div>
+        <!-- Game Categories Section -->
+        <section class="mb-12">
+            <h2 class="text-2xl md:text-3xl font-bold mb-6 text-apple-black">Game Categories</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="/categories/match3.html" class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold text-apple-blue">Match3 Games</h3>
+                    <p class="mt-2 text-sm">Strategic tile-matching puzzles requiring pattern recognition to create explosive chain reactions</p>
+                </a>
+                <a href="/categories/bubble shooter.html" class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold text-apple-blue">Bubble Shooter Games</h3>
+                    <p class="mt-2 text-sm">Precision-based color-matching games where angled shots trigger cascading bubble bursts</p>
+                </a>
+                <a href="/categories/puzzle.html" class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold text-apple-blue">Puzzle Games</h3>
+                    <p class="mt-2 text-sm">Brain-teasing challenges demanding logical reasoning and creative problem-solving skills</p>
+                </a>
+                <a href="/categories/jump&run.html" class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold text-apple-blue">Jump&Run Games</h3>
+                    <p class="mt-2 text-sm">Precision platformers testing spatial awareness through timed leaps and obstacle courses</p>
+                </a>
+                <a href="/categories/multiplayer.html" class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold text-apple-blue">Multiplayer Games</h3>
+                    <p class="mt-2 text-sm">Social gaming experiences featuring cooperative missions or competitive PvP showdowns</p>
+                </a>
+                <a href="/categories/adventure.html" class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition">
+                    <h3 class="text-xl font-semibold text-apple-blue">Adventure Games</h3>
+                    <p class="mt-2 text-sm">Embark on epic journeys and unravel mysteries in immersive adventure games.</p>
+                </a>
             </div>
         </section>
     </main>
 
-    <footer class="bg-apple-darkgray text-white py-8 mt-12">
-        <div class="container mx-auto px-4 md:px-8">
-            <div class="text-center">
-                <p class="mb-2">&copy; 2023 AdventureGame.online - All Rights Reserved</p>
-                <p class="text-sm opacity-75">Incredibox Sprunki is an interactive music adventure game that brings creativity and fun together.</p>
+    <footer class="bg-apple-darkgray text-white py-6 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2023 AdventureGame.online - All Rights Reserved</p>
+                </div>
+                <div>
+                    <ul class="flex space-x-4">
+                        <li><a href="/about.html" class="hover:text-apple-blue transition">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-apple-blue transition">Contact</a></li>
+                        <li><a href="/privacy.html" class="hover:text-apple-blue transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </footer>
+
+    <script>
+        // Function to create a game card
+        function createGameCard(game) {
+            return `
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <a href="/games/${game.id}.html">
+                        <img src="${game.thumbnailUrl}" alt="${game.title}" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-apple-blue">${game.title}</h3>
+                            <p class="text-sm text-gray-600 mt-1">${game.description}</p>
+                            <div class="mt-3 inline-block px-4 py-2 bg-apple-blue text-white rounded-lg hover:bg-blue-600 transition">Play Now</div>
+                        </div>
+                    </a>
+                </div>
+            `;
+        }
+
+        // Populate featured and popular games
+        document.addEventListener('DOMContentLoaded', function() {
+            const featuredGamesContainer = document.getElementById('featured-games-container');
+            const popularGamesContainer = document.getElementById('popular-games-container');
+            
+            // Get featured games
+            const featuredGames = gamesData.filter(game => game.featured).slice(0, 4);
+            featuredGamesContainer.innerHTML = featuredGames.map(createGameCard).join('');
+            
+            // Get popular games
+            const popularGames = [...gamesData].sort((a, b) => b.popularity - a.popularity).slice(0, 8);
+            popularGamesContainer.innerHTML = popularGames.map(createGameCard).join('');
+        });
+    </script>
 </body>
 </html>

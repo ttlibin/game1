@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | AdventureGame.online</title>
+    <meta name="description" content="Get in touch with the AdventureGame.online team. We'd love to hear from you!">
+    <link rel="canonical" href="https://adventuregame.online/contact.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            white: '#FFFFFF',
+                            lightgray: '#F5F5F7',
+                            darkgray: '#333333',
+                            black: '#000000',
+                            blue: '#0071E3',
+                            red: '#FF3B30'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-apple-lightgray text-apple-darkgray font-sans min-h-screen flex flex-col">
+    <header class="bg-apple-blue text-white py-4 shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <a href="/" class="text-2xl font-bold mb-4 md:mb-0">AdventureGame.online</a>
+                <nav class="w-full md:w-auto">
+                    <ul class="flex flex-wrap justify-center md:justify-end space-x-1 md:space-x-4">
+                        <li><a href="/" class="px-3 py-2 rounded hover:bg-blue-600 transition">Home</a></li>
+                        <li><a href="/categories/new.html" class="px-3 py-2 rounded hover:bg-blue-600 transition">New Games</a></li>
+                        <li><a href="/categories/popular.html" class="px-3 py-2 rounded hover:bg-blue-600 transition">Popular</a></li>
+                        <li><a href="/categories/match3.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{MATCH3_ACTIVE}}">Match3</a></li>
+                        <li><a href="/categories/Bubble Shooter.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{BUBBLE SHOOTER_ACTIVE}}">Bubble Shooter</a></li>
+                        <li><a href="/categories/puzzle.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{PUZZLE_ACTIVE}}">Puzzle</a></li>
+                        <li><a href="/categories/match3.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{MATCH3_ACTIVE}}">Match3</a></li>
+                        <li><a href="/categories/Bubble Shooter.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{BUBBLE SHOOTER_ACTIVE}}">Bubble Shooter</a></li>
+                        <li><a href="/categories/puzzle.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{PUZZLE_ACTIVE}}">Puzzle</a></li>
+                        <li><a href="/categories/adventure.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{ADVENTURE_ACTIVE}}">Adventure</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-apple-blue mb-6">Contact Us</h1>
+            
+            <p class="mb-8 text-lg">We'd love to hear from you! Whether you have a question, suggestion, or just want to say hello, please feel free to reach out to us using the form below.</p>
+            
+            <form id="contact-form" class="space-y-6">
+                <div>
+                    <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                    <input type="text" id="name" name="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-apple-blue" required>
+                </div>
+                
+                <div>
+                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                    <input type="email" id="email" name="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-apple-blue" required>
+                </div>
+                
+                <div>
+                    <label for="subject" class="block text-sm font-medium text-gray-700 mb-1">Subject</label>
+                    <input type="text" id="subject" name="subject" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-apple-blue" required>
+                </div>
+                
+                <div>
+                    <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                    <textarea id="message" name="message" rows="5" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-apple-blue" required></textarea>
+                </div>
+                
+                <div>
+                    <button type="submit" class="px-6 py-3 bg-apple-blue text-white font-semibold rounded-lg hover:bg-blue-600 transition">Send Message</button>
+                </div>
+            </form>
+            
+            <div id="form-success" class="hidden mt-6 p-4 bg-green-100 text-green-700 rounded-md">
+                Thank you for your message! We'll get back to you as soon as possible.
+            </div>
+            
+            <div class="mt-12 pt-8 border-t border-gray-200">
+                <h2 class="text-2xl font-bold text-apple-blue mb-4">Other Ways to Reach Us</h2>
+                
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="font-semibold">Email</h3>
+                        <p>contact@adventuregame.online</p>
+                    </div>
+                    
+                    <div>
+                        <h3 class="font-semibold">Social Media</h3>
+                        <div class="flex space-x-4 mt-2">
+                            <a href="#" class="text-apple-blue hover:underline">Twitter</a>
+                            <a href="#" class="text-apple-blue hover:underline">Facebook</a>
+                            <a href="#" class="text-apple-blue hover:underline">Instagram</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-apple-darkgray text-white py-6 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2023 AdventureGame.online - All Rights Reserved</p>
+                </div>
+                <div>
+                    <ul class="flex space-x-4">
+                        <li><a href="/about.html" class="hover:text-apple-blue transition">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-apple-blue transition">Contact</a></li>
+                        <li><a href="/privacy.html" class="hover:text-apple-blue transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // In a real implementation, you would send the form data to your server here
+            // For this example, we'll just show the success message
+            
+            document.getElementById('form-success').classList.remove('hidden');
+            document.getElementById('contact-form').reset();
+            
+            // Hide the success message after 5 seconds
+            setTimeout(function() {
+                document.getElementById('form-success').classList.add('hidden');
+            }, 5000);
+        });
+    </script>
+</body>
+</html>

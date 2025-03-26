@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | AdventureGame.online</title>
+    <meta name="description" content="Learn more about AdventureGame.online, your source for free HTML5 games.">
+    <link rel="canonical" href="https://adventuregame.online/about.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            white: '#FFFFFF',
+                            lightgray: '#F5F5F7',
+                            darkgray: '#333333',
+                            black: '#000000',
+                            blue: '#0071E3',
+                            red: '#FF3B30'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-apple-lightgray text-apple-darkgray font-sans min-h-screen flex flex-col">
+    <header class="bg-apple-blue text-white py-4 shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <a href="/" class="text-2xl font-bold mb-4 md:mb-0">AdventureGame.online</a>
+                <nav class="w-full md:w-auto">
+                    <ul class="flex flex-wrap justify-center md:justify-end space-x-1 md:space-x-4">
+                        <li><a href="/" class="px-3 py-2 rounded hover:bg-blue-600 transition">Home</a></li>
+                        <li><a href="/categories/new.html" class="px-3 py-2 rounded hover:bg-blue-600 transition">New</a></li>
+                        <li><a href="/categories/popular.html" class="px-3 py-2 rounded hover:bg-blue-600 transition">Popular</a></li>
+                        <li><a href="/categories/match3.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{MATCH3_ACTIVE}}">Match3</a></li>
+                        <li><a href="/categories/Bubble Shooter.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{BUBBLE SHOOTER_ACTIVE}}">Bubble Shooter</a></li>
+                        <li><a href="/categories/puzzle.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{PUZZLE_ACTIVE}}">Puzzle</a></li>
+                        <li><a href="/categories/match3.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{MATCH3_ACTIVE}}">Match3</a></li>
+                        <li><a href="/categories/Bubble Shooter.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{BUBBLE SHOOTER_ACTIVE}}">Bubble Shooter</a></li>
+                        <li><a href="/categories/puzzle.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{PUZZLE_ACTIVE}}">Puzzle</a></li>
+                        <li><a href="/categories/adventure.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{ADVENTURE_ACTIVE}}">Adventure</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8 flex-grow">
+        <div class="max-w-3xl mx-auto bg-white rounded-xl shadow-lg p-8">
+            <h1 class="text-3xl md:text-4xl font-bold text-apple-blue mb-6">About Us</h1>
+            
+            <div class="prose prose-lg max-w-none">
+                <p class="mb-4">Welcome to AdventureGame.online, your premier destination for free HTML5 games that you can play directly in your browser without any downloads or installations.</p>
+                
+                <h2 class="text-2xl font-bold text-apple-blue mt-8 mb-4">Our Mission</h2>
+                <p class="mb-4">Our mission is to provide a curated collection of high-quality HTML5 games that are accessible to everyone. We believe that gaming should be fun, easy to access, and available to all, regardless of the device you're using.</p>
+                
+                <h2 class="text-2xl font-bold text-apple-blue mt-8 mb-4">What We Offer</h2>
+                <p class="mb-4">At AdventureGame.online, we offer a diverse selection of games across various genres, including:</p>
+                <ul class="list-disc pl-6 mb-4">
+                    <li>Action-packed adventures</li>
+                    <li>Brain-teasing puzzles</li>
+                    <li>Exciting racing games</li>
+                    <li>Strategic challenges</li>
+                    <li>And much more!</li>
+                </ul>
+                <p class="mb-4">All our games are carefully selected to ensure they provide an enjoyable experience for players of all ages.</p>
+                
+                <h2 class="text-2xl font-bold text-apple-blue mt-8 mb-4">Our Story</h2>
+                <p class="mb-4">AdventureGame.online was founded in 2023 by a group of passionate gamers who wanted to create a platform where people could easily access and enjoy HTML5 games. We started with a small collection of games and have been growing ever since, constantly adding new titles to our library.</p>
+                
+                <h2 class="text-2xl font-bold text-apple-blue mt-8 mb-4">Contact Us</h2>
+                <p class="mb-4">We're always looking to improve our platform and would love to hear your feedback. If you have any questions, suggestions, or just want to say hello, please don't hesitate to <a href="/contact.html" class="text-apple-blue hover:underline">contact us</a>.</p>
+                
+                <p class="mt-8">Thank you for visiting AdventureGame.online. We hope you enjoy playing our games as much as we enjoy bringing them to you!</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-apple-darkgray text-white py-6 mt-auto">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2023 AdventureGame.online - All Rights Reserved</p>
+                </div>
+                <div>
+                    <ul class="flex space-x-4">
+                        <li><a href="/about.html" class="hover:text-apple-blue transition">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-apple-blue transition">Contact</a></li>
+                        <li><a href="/privacy.html" class="hover:text-apple-blue transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

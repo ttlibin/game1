@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Games - Play Latest Online Games | AdventureGame.online</title>
+    <meta name="description" content="Discover and play the newest online games. Check out our latest additions of free HTML5 games updated regularly.">
+    <link rel="canonical" href="https://adventuregame.online/categories/new.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        apple: {
+                            white: '#FFFFFF',
+                            lightgray: '#F5F5F7',
+                            darkgray: '#333333',
+                            black: '#000000',
+                            blue: '#0071E3',
+                            red: '#FF3B30'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+        }
+    </style>
+</head>
+<body class="bg-apple-lightgray text-apple-darkgray font-sans">
+    <header class="bg-apple-blue text-white py-4 shadow-md">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <a href="/" class="text-2xl font-bold mb-4 md:mb-0">AdventureGame.online</a>
+                <nav class="w-full md:w-auto">
+                    <ul class="flex flex-wrap justify-center md:justify-end space-x-1 md:space-x-4">
+                        <li><a href="/" class="px-3 py-2 rounded hover:bg-blue-600 transition">Home</a></li>
+                        <li><a href="/categories/new.html" class="px-3 py-2 rounded bg-blue-600 transition">New</a></li>
+                        <li><a href="/categories/popular.html" class="px-3 py-2 rounded hover:bg-blue-600 transition">Popular</a></li>
+                        <li><a href="/categories/match3.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{MATCH3_ACTIVE}}">Match3</a></li>
+                        <li><a href="/categories/Bubble Shooter.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{BUBBLE SHOOTER_ACTIVE}}">Bubble Shooter</a></li>
+                        <li><a href="/categories/puzzle.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{PUZZLE_ACTIVE}}">Puzzle</a></li>
+                        <li><a href="/categories/adventure.html" class="px-3 py-2 rounded hover:bg-blue-600 transition {{ADVENTURE_ACTIVE}}">Adventure</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="text-center mb-12">
+            <h1 class="text-4xl font-bold text-apple-darkgray mb-4">New Games</h1>
+            <p class="text-xl text-gray-600 max-w-3xl mx-auto">Check out our latest additions! Discover and play the newest games added to our collection.</p>
+        </div>
+
+        <div id="new-games-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            <!-- Games will be loaded here -->
+            <div class="col-span-full text-center">
+                <div class="inline-block animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-apple-blue"></div>
+                <p class="mt-4 text-xl text-gray-600">Loading games...</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-apple-darkgray text-white py-6 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <p>&copy; 2023 AdventureGame.online - All Rights Reserved</p>
+                </div>
+                <div>
+                    <ul class="flex space-x-4">
+                        <li><a href="/about.html" class="hover:text-apple-blue transition">About</a></li>
+                        <li><a href="/contact.html" class="hover:text-apple-blue transition">Contact</a></li>
+                        <li><a href="/privacy.html" class="hover:text-apple-blue transition">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/games-data.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const newGamesContainer = document.getElementById('new-games-container');
+            
+            // 检查gamesData是否存在
+            if (typeof gamesData === 'undefined') {
+                newGamesContainer.innerHTML = '<div class="col-span-full text-center py-12"><p class="text-xl text-gray-500">Error: Game data not loaded. Please check the console for errors.</p></div>';
+                console.error('Games data is undefined. Make sure games-data.js is loaded correctly.');
+                return;
+            }
+            
+            // 打印游戏数据以便调试
+            console.log('Games data loaded:', gamesData.length, 'games');
+            
+            // 排序游戏（最新的在前面）
+            const sortedGames = [...gamesData].sort((a, b) => {
+                const dateA = a.dateAdded ? new Date(a.dateAdded) : new Date('2023-01-01');
+                const dateB = b.dateAdded ? new Date(b.dateAdded) : new Date('2023-01-01');
+                
+                // 检查日期是否有效
+                const validDateA = !isNaN(dateA.getTime());
+                const validDateB = !isNaN(dateB.getTime());
+                
+                if (!validDateA && !validDateB) return 0;
+                if (!validDateA) return 1;
+                if (!validDateB) return -1;
+                
+                return dateB - dateA;
+            });
+            
+            // 创建游戏卡片HTML
+            function createGameCard(game) {
+            return `
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <a href="/games/${game.id}.html">
+                        <img src="${game.thumbnailUrl}" alt="${game.title}" class="w-full h-40 object-cover">
+                        <div class="p-4">
+                            <h3 class="text-lg font-semibold text-apple-blue">${game.title}</h3>
+                            <p class="text-sm text-gray-600 mt-1">${game.description}</p>
+                            <div class="mt-3 inline-block px-4 py-2 bg-apple-blue text-white rounded-lg hover:bg-blue-600 transition">Play Now</div>
+                        </div>
+                    </a>
+                </div>
+            `;
+        }
+            
+            // 显示游戏
+            if (sortedGames.length > 0) {
+                newGamesContainer.innerHTML = sortedGames.map(createGameCard).join('');
+            } else {
+                newGamesContainer.innerHTML = '<div class="col-span-full text-center py-12"><p class="text-xl text-gray-500">No new games found. Check back soon!</p></div>';
+            }
+        });
+    </script>
+</body>
+</html>
